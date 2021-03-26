@@ -1,0 +1,13 @@
+//Ispas Alexandra Petrina 322CD
+
+Pentru a citi datele, citesc cate un rand din input. Daca nu exista spatii pe linie, 
+inseamna ca am citit fie numarul task-ului, fie sirurile speciale, fie N. 
+Daca sirul incepe cu o cifra si este prima cifra citita, acesta reprezinta numarul task-ului,
+altfel este N.
+
+La cerinta 3, parcurg tabela de bonus si verific conditiile sirurilor.
+La 4, iterez prin cuvinete si il iau pe primul nefolosit care poate fi adaugat.
+La 5, iterez prin cuvinte. Daca gasesc unul nou si care are initiala in tabela, ii calculez 
+punctajul si caut punctajul maxim.
+La 6 fac acelasi lucru ca la 5, dar trebuie sa verific daca un cuvant este nou sau nu cu alt
+vector de string-uri, deoarece cel din input le are doar pe cele ale jucatorului 1.
