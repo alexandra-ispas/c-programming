@@ -1,0 +1,39 @@
+//Ispas Alexandra-Petrina 322CD
+
+Part 1.1 
+get_bit() - verific daca bitul i este setat prin comparare cu o masca
+flip_bit() - schimb valoarea bitului prin XOR
+activate_bit() - setez valoarea bitului la 1 prin OR
+clear_bit() - setez valoarea bitului la 1 prin AND cu o masca
+
+Part 1.2
+and_gate() - este un nand_gate() negat
+not_gate() - poate fi implemetat cu nand_gate()
+or_gate() - este o combinatie de porti nand
+
+Part 1.3
+full_adder() - am luat cazuri separate pentru diferite combinatii de valori de
+				input
+ripple_carry_adder() - folosesc full_adder(), iar la fiecare iteratie modific carry si scriu valoarea sumei in res
+
+Part 2.1
+send_byte_message() - trimit caracterele convertite la int si folosind cheia de
+						codificare
+
+Part 2.2
+comm_message() - folosesc acelasi algoritm ca si la recv_message() pentru a 
+				 decodifica lungimea
+send_squanch2() - de la fiecare byte prelucrez mereu ultimul bit urmand sa fac o 
+				  shiftare pentru a itera
+decode_squanch2() - am considerat ca bitii de pe pozitiile pare din c formeaza
+					prima jumatate a byte-ului
+
+Part 3.3
+trial_of_the_grasses() - aici am folosit ecuatiile date:
+antibodies_low & antibodies_high = 0 -> cel mai simplu caz ar fi ca una din ele sa aiba toti bitii zero (1) si asta ar verifica si ecuatia antibodies_low|antibodies_high = cocktail
+
+(antibodies_high & cocktail) ^ (antibodies_low | cocktail) = 0 =>
+antibodies_high & cocktail == antibodies_low | cocktail (2)
+
+daca tinem cont de (1) in (2) => antibodies_high nu poate avea toti bitii zero, deoarece nu exista antiboties_low care sa respecte (2)
+=>antibodies_low = 0 => antibodies_high = cocktail
